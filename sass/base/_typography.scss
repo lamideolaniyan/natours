@@ -42,9 +42,11 @@ body {
     font-size: 3.5rem;
     font-weight: 700;
     text-transform: uppercase;
-    display: inline-block;
     margin-bottom: 6rem;
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    display: inline-block;
+    background-image: linear-gradient(to right,
+            $color-primary-light,
+            $color-primary-dark);
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: .2rem;
