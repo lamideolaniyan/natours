@@ -3,9 +3,18 @@
     padding: 10rem 0;
     font-size: 1.4rem;
 
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
+
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 6rem;
+        }
     }
 
     &__logo {
@@ -17,6 +26,11 @@
         border-top: 1px solid $color-grey-dark;
         padding-top: 2rem;
         display: inline-block; //Doesn't occupy the entire parent width unlike block, no line breaks too. 
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list {
@@ -59,5 +73,11 @@
         //To make the paragraph symmetric under the logo with nav
         width: 80%;
         float: right;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
     }
 }
