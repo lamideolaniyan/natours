@@ -24,12 +24,19 @@
         opacity: 0;
         transition: all .5s .2s;
 
-
+        /*  @include respond(tab-land) {
+            display: block;
+        }*/
     }
 
     &__left {
         width: 33.333333333333333333%;
         display: table-cell;
+
+        @include respond(tab-land) {
+            display: block;
+            width: 100%;
+        }
     }
 
     &__right {
@@ -37,11 +44,61 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-land) {
+            display: block;
+            width: 100%;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        @include respond(tab-land) {
+            display: inline-block;
+            height: 25rem;
+        }
+
+        @include respond(phone) {
+            display: none;
+        }
+
+
+        &--1 {
+            @include respond(tab-land) {
+                width: 50%;
+                float: left;
+            }
+        }
+
+        &--2 {
+            @include respond(tab-land) {
+                width: 50%;
+            }
+        }
+    }
+
+    &__headQ {
+
+        @include respond(tab-land) {
+            display: block;
+            text-align: center !important;
+        }
+
+        @include respond(phone) {
+            font-size: medium !important;
+        }
+    }
+
+    &__headZ {
+        @include respond(tab-land) {
+            text-align: center !important;
+        }
+
+        @include respond(phone) {
+            font-size: small !important;
+        }
     }
 
     &__text {
@@ -56,6 +113,11 @@
         -moz-hyphens: auto;
         -ms-hyphens: auto;
         hyphens: auto;
+
+        @include respond(phone) {
+            font-size: 1rem;
+            //line-height: 1;
+        }
     }
 
     //Open States
